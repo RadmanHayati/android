@@ -1,1 +1,62 @@
+ OOP:
 
+- **Explain OOP Concepts.**
+    - Object-Oriented Programming is a methodology of designing a program using classes, objects, [inheritance](https://en.wikipedia.org/wiki/Inheritance_(object-oriented_programming)), [polymorphism](https://en.wikipedia.org/wiki/Polymorphism_(computer_science)), [abstraction](https://en.wikipedia.org/wiki/Abstraction_(software_engineering)), and [encapsulation](https://en.wikipedia.org/wiki/Encapsulation_(computer_programming)).
+
+- **Differences between abstract classes and interfaces?**
+    - An abstract class, is a class that contains both concrete and abstract methods (methods without implementations). An abstract method must be implemented by the abstract class sub-classes. Abstract classes cannot be instantiated and need to be extended to be used.
+    - An interface is like a blueprint/contract of a class (or it may be thought of as a class with methods, but without their implementation). It contains empty methods that represent, what all of its subclasses should have in common. The subclasses provide the implementation for each of these methods. Interfaces are implemented.
+- Why was interface generatad in Java while we can use abstract class?
+    - Because Java does not support multiple inheritance
+
+- **What is the difference between iterator and enumeration in java?**
+    - In Enumeration we don't have remove() method and we can only read and traverse through a collection.
+    - Iterators can be applied to any collection. In Iterator, we can read and remove items from a collection.
+- **Do you agree we use composition over inheritance?**
+    
+    Favoring **[Composition](https://www.geeksforgeeks.org/composition-in-java/)** over **[Inheritance](https://www.geeksforgeeks.org/inheritance-in-java/)** is a principle in **[object-oriented programming (OOP).](https://www.geeksforgeeks.org/object-oriented-programming-oops-concept-in-java/)** Classes should achieve polymorphic behavior and code reuse by their composition rather than inheritance from a base or parent class. To get the higher design flexibility, the design principle says that composition should be favored over inheritance.
+    
+    Inheritance should only be used when subclass ‘is a’ superclass. Don’t use inheritance to get code reuse. If there is no ‘is a’ relationship, then use composition for code reuse.
+    
+    **Reasons to Favour Composition over Inheritance in Java and OOP:**
+    
+    1. The fact that Java does not support multiple inheritances is one reason for favoring composition over inheritance in Java. Since you can only extend one class in Java, but if you need multiple features, such as reading and writing character data into a file, you need Reader and Writer functionality. It makes your job simple to have them as private members, and this is called Composition.
+    2. Composition offers better test-ability of a class than Inheritance. If one class consists of another class, you can easily construct a Mock Object representing a composed class for the sake of testing. This privilege is not given by inheritance.
+    3. Although both Composition and Inheritance allow you to reuse code, one of Inheritance’s disadvantages is that it breaks encapsulation. If the subclass depends on the action of the superclass for its function, it suddenly becomes fragile. When super-class behavior changes, sub-class functionality can be broken without any modification on its part.
+    4. In the timeless classic Design Patterns, several object-oriented design patterns listed by Gang of Four: Elements of Reusable Object-Oriented Software, favor Composition over Inheritance. Strategy design pattern, where composition and delegation are used to modify the behavior of Context without touching context code, is a classical example of this. Instead of getting it by inheritance, because Context uses composition to carry strategy, it is simple to have a new implementation of strategy at run-time.
+    5. Another reason why composition is preferred over inheritance is flexibility. If you use Composition, you are flexible enough to replace the better and updated version of the Composed class implementation. One example is the use of the comparator class, which provides features for comparison.
+    
+    ## **SOLID**
+    
+    **SOLID** is a mnemonic acronym that helps define the five basic **object-oriented design** principles:
+    
+    - Single Responsibility Principle
+    - Open-Closed Principle
+    - Liskov Substitution Principle
+    - Interface Segregation Principle
+    - Dependency Inversion Principle
+    
+    ## **SOLID #1: The Single Responsibility Principle (SRP)**
+    
+    > A class should have one, and only one, reason to change.
+    > 
+    
+    ## **SOLID #2: The Open-Closed Principle (OCP)**
+    
+    > Software entities (classes, modules, functions, etc…) should be open for extension, but closed for modification
+    > 
+    
+    ## **SOLID #3: The Liskov Substitution Principle (LSP)**
+    
+    > Child classes should never break the parent class’ type definitions.
+    > 
+    
+    ## **SOLID #4: The Interface Segregation Principle (ISP)**
+    
+    > The interface-segregation principle (ISP) states that no client should be forced to depend on methods it does not use.
+    > 
+    
+    ## **SOLID #5: The Dependency Inversion Principle (DIP)**
+    
+    > 1. High-level modules should not depend on low-level modules. Both should depend on abstractions\. 2. Abstractions should not depend upon details. Details should depend upon abstractions.
+    >
