@@ -1,5 +1,5 @@
 
-  ## **SOLID**
+  ## **SOLID**  https://medium.com/android-news/solid-principles-in-android-for-the-interview-6824b2abbbd3
     
     **SOLID** is a mnemonic acronym that helps define the five basic **object-oriented design** principles:
     
