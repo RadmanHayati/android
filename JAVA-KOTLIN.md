@@ -314,3 +314,56 @@ val arr = arrayOf(1, 2, 3);
 
 The type is Array<Int>.
 ```
+
+    
+    1-**Difference between method overloading and overriding:**
+
+- Overloading happens at compile-time while Overriding happens at runtime: The binding of overloaded method call to its definition happens at compile-time however binding of overridden method call to its definition happens at runtime. More info on static vs. dynamic binding: [StackOverflow](https://stackoverflow.com/questions/19017258/static-vs-dynamic-binding-in-java).
+- Static methods can be overloaded which means a class can have more than one static method of same name. Static methods cannot be overridden, even if you declare a same static method in child class it has nothing to do with the same method of parent class as overridden static methods are chosen by the reference class and not by the class of the object.
+- The most basic difference is that overloading is being done in the same class while for overriding base and child classes are required. Overriding is all about giving a specific implementation to the inherited method of parent class.
+    
+    Static binding is being used for overloaded methods and dynamic binding is being used for overridden/overriding methods. Performance: Overloading gives better performance compared to overriding. The reason is that the binding of overridden methods is being done at runtime.
+    
+    Private and final methods can be overloaded but they cannot be overridden. It means a class can have more than one private/final methods of same name but a child class cannot override the private/final methods of their base class.
+    
+    Return type of method does not matter in case of method overloading, it can be same or different. However in case of method overriding the overriding method can have more specific return type (meaning if, for example, base method returns an instance of Number class, all overriding methods can return any class that is extended from Number, but not a class that is higher in the hierarchy, like, for example, Object is in this particular case).
+    
+    Argument list should be different while doing method overloading. Argument list should be same in method Overriding. It is also a good practice to annotate overridden methods with `@Override` to make the compiler be able to notify you if child is, indeed, overriding parent's class method during compile-time.
+    
+    2-What is the difference between java and kotlin for “Protected” mofier?
+    
+    • The protected modifier in Kotlin means that it is strictly accessible only by the declaring class and subclasses. This is the same as most people expect Java to work, but subtly different from how Java works. In Java, the protected modifier also allows access to the element from anything else in the same package.
+    
+
+3- what is Internal modifier and what is module in kotlin?
+
+Internal is a new modifier available in Kotlin that’s not there in Java. Setting a declaration as internal means that it’ll be available in the same module only. By module in Kotlin, we mean a group of files that are compiled together.
+
+4-**[What is the difference between init block and constructor in kotlin?](https://stackoverflow.com/questions/55356837/what-is-the-difference-between-init-block-and-constructor-in-kotlin)**
+
+The **init** block will execute immediately after the primary constructor. Initializer blocks effectively become part of the primary constructor.
+
+The **constructor** is the secondary constructor. Delegation to the primary constructor happens as the first statement of a secondary constructor, so the code in all initializer blocks is executed before the secondary constructor body.
+
+5-**Can an Interface implement another Interface?**
+
+- Yes, an interface can implement another interface (and more than one), but it needs to use `extends`, rather than `implements` keyword. And while you can not remove methods from parent interface, you can add new ones freely to your sub-interface.
+
+6-**What are the design patterns?**
+
+a software design pattern is a general, reusable solution to a commonly occurring problem within a given context in software design.
+
+- Creational patterns
+    - Builder [Wikipedia](https://en.wikipedia.org/wiki/Builder_pattern?oldformat=true)
+    - Factory [Wikipedia](https://en.wikipedia.org/wiki/Factory_method_pattern?oldformat=true)
+    - Singleton [Wikipedia](https://en.wikipedia.org/wiki/Singleton_pattern)
+    - Monostate [Wikipedia](http://wiki.c2.com/?MonostatePattern)
+    - Fluent Interface Pattern [Wikipedia](https://martinfowler.com/bliki/FluentInterface.html)
+- Structural patterns
+    - Adapter [Wikipedia](https://en.wikipedia.org/wiki/Adapter_pattern?oldformat=true)
+    - Decorator [Wikipedia](https://en.wikipedia.org/wiki/Decorator_pattern?oldformat=true)
+    - Facade [Wikipedia](https://en.wikipedia.org/wiki/Facade_pattern?oldformat=true)
+- Behavioural patterns
+    - Chain of responsibility [Wikipedia](https://en.wikipedia.org/wiki/Chain-of-responsibility_pattern?oldformat=true)
+    - Iterator [Wikipedia](https://en.wikipedia.org/wiki/Iterator_pattern?oldformat=true)
+    - Strategy [Wikipedia](https://en.wikipedia.org/wiki/Strategy_pattern?oldformat=true)
