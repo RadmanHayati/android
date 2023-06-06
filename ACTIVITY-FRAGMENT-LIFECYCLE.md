@@ -121,3 +121,123 @@ If the user presses the **Home** button, the activity instance state must be s
 1. **Single Fragment:** Display only one single view on the device screen. This type of fragment is mostly used for mobile phones.
 2. **List Fragment:** This Fragment is used to display a list-view from which the user can select the desired sub-activity. The menu drawer of apps like Gmail is the best example of this kind of fragment.
 3. **Fragment Transaction:** This kind of fragments supports the transition from one fragment to another at run time. Users can switch between multiple fragments like switching tabs.
+
+
+
+### **1. What is an Activity in Android?**
+
+An activity is a single, focused thing that the user can do. Almost all activities interact with the user, so the Activity class takes care of creating a window for you in which you can place your UI with setContentView(View). While activities are often presented to the user as full-screen windows, they can also be used in other ways: as floating windows (via a theme with windowIsFloating set) or embedded inside of another activity (using ActivityGroup).
+
+### **2. Can you explain the different stages of the activity life cycle on Android?**
+
+There are four different stages in the activity life cycle on Android: created, started, resumed, and destroyed. The created stage is when the activity is first created and initialized. The started stage is when the activity becomes visible to the user. The resumed stage is when the activity is in the foreground and the user can interact with it. The destroyed stage is when the activity is no longer visible to the user and is being removed from memory.
+
+### **3. How can you easily remember the various stages of the activity lifecycle?**
+
+There are four main stages in the activity lifecycle: onCreate(), onStart(), onResume(), and onPause(). You can easily remember these stages by thinking of them as the four C’s: Create, Start, Resume, and Pause.
+
+### **4. When does your app go from being “inactive” to being “paused”?**
+
+When an app is no longer the focus of the user’s attention, but is still running in the background, it is considered to be in the “paused” state. This can happen when the user switches to another app, or if the system needs to free up resources for another app.
+
+### **5. What are some common scenarios for starting a new activity or stopping and existing one?**
+
+Some common scenarios for starting a new activity include when the user presses a button or link, when the user selects an item from a list, or when the user starts a new task. Some common scenarios for stopping an existing activity include when the user presses the back button, when the user finishes a task, or when the user navigates to a new activity.
+
+### **6. When do you need to call onPause(), onResume() and onStop()?**
+
+You need to call onPause() when your activity is no longer visible to the user, onResume() when your activity becomes visible to the user again and onStop() when your activity is no longer visible to the user and is being destroyed.
+
+### **7. What happens when you start another activity while your current activity is paused?**
+
+When you start another activity while your current activity is paused, the new activity will be started and the current activity will be pushed to the background.
+
+### **8. Is it possible to start a new activity without creating a backstack? If yes, then how?**
+
+Yes, it is possible to start a new activity without creating a backstack. You can do this by using the FLAG_ACTIVITY_NO_HISTORY flag when starting the new activity. This will prevent the new activity from being added to the backstack, and as a result, the user will not be able to return to it.
+
+### **9. What’s the difference between Activities and Fragments? Which one would you recommend using in certain situations?**
+
+Activities are a core component of Android applications, and they are responsible for managing the lifecycle of an app. Fragments are a more recent addition to Android, and they are designed to be used within an Activity. They are essentially self-contained modules that can be used to build up a more complex user interface.
+
+If you are looking to create a simple app with a single screen, then an Activity is probably all you need. However, if you are looking to create a more complex app with multiple screens, then you will need to use Fragments to build up the user interface.
+
+### **10. When does an activity become non-interactive? Does this mean that onSaveInstanceState() should be called at this stage?**
+
+An activity becomes non-interactive when it is no longer in the foreground, typically because another activity has been launched in front of it. This does not necessarily mean that onSaveInstanceState() will be called at this stage, as the activity may simply be paused rather than destroyed. However, if the activity is destroyed (for example, if the user presses the back button), then onSaveInstanceState() will be called.
+
+### **11. Can you explain how passing data between activities works on Android?**
+
+When an activity is started, it can be passed data from the activity that started it. This data is stored in the Intent object that is used to start the activity. The Intent object can be accessed by the activity that started it using the getIntent() method. The data that is stored in the Intent object is known as an “extra.” Extras can be of various types, such as strings, integers, and booleans. To add an extra to an Intent object, you use the putExtra() method. To retrieve an extra from an Intent object, you use the getStringExtra(), getIntExtra(), or getBooleanExtra() methods.
+
+### **12. What’s the best way to pass data between two activities?**
+
+The best way to pass data between two activities is to use the Intent class. You can putExtra() data into an Intent, and then get that data out in the second activity with getIntent().getExtra().
+
+### **13. At what point during the activity lifecycle does the system run onCreate()?**
+
+The system runs onCreate() when the activity is first created.
+
+### **14. Do all android apps support multiple instances of the same activity?**
+
+No, not all Android apps support multiple instances of the same activity. In fact, most Android apps only support a single instance of each activity. However, there are some apps that do support multiple instances of the same activity, such as certain productivity apps.
+
+### **15. What is the purpose of the savedInstanceState parameter passed into the onCreate() method?**
+
+The savedInstanceState parameter is used to store data that needs to be saved across activity lifecycles. This is important because when an activity is destroyed, any data that is not stored in the savedInstanceState parameter will be lost.
+
+### **16. What’s the difference between calling finish() and moveTaskToBack(true) ?**
+
+When you call finish() on an activity, it immediately destroys the activity and removes it from the activity stack. This means that the activity can no longer be accessed by the user. When you call moveTaskToBack(true) on an activity, it simply moves the activity to the back of the activity stack. The activity is not destroyed and can still be accessed by the user.
+
+### **17. Why are fragments not used independently but always as part of an activity?**
+
+Fragments are not used independently because they need to be attached to an activity in order to function. This is due to the fact that fragments rely on the activity’s lifecycle to know when to create, destroy, or pause.
+
+### **18. What is the main reason why developers prefer fragments over activities?**
+
+The main reason why developers prefer fragments over activities is that fragments are more modular and can be reused more easily. This means that developers can create more complex and dynamic user interfaces using fragments, without having to create a new activity for every single screen.
+
+### **19. What is the proper way to add a fragment to an activity?**
+
+The proper way to add a fragment to an activity is to first create a new FragmentManager and FragmentTransaction instance, then add the fragment to the activity using the FragmentTransaction.commit() method.
+
+### **20. What are the three major components of the Android architecture?**
+
+The three major components of the Android architecture are the operating system, the middleware, and the applications. The operating system is responsible for managing the hardware and software resources of the device. The middleware is responsible for providing a link between the operating system and the applications. The applications are responsible for providing the user with the functionality they are looking for.
+
+One of the major component in Android is **Activity**, there are many questions related to Android, I tried putting it all together. This is also interview Questions.
+
+1. **Explain Activity Life Cycle.Ans: [**Check Here](https://medium.com/@nithyanataraj/android-activity-life-cycle-32fcd0c2a973)
+
+# ***Scenario Based Questions***
+
+2. **From Activity A, then go to Activity B, then go back to Activity A, Activity A’s which method will be called. Explain.Ans.** onRestart() →onStart() →onResume()
+
+3. **Home Button is pressed when your interacting with the Activity . What life cycle method will be called?Ans.** After hitting the Home ButtononPause() →onStop()
+
+4. **Try to open the app from Launcher. What life cycle method will be called?**
+
+On coming back to app
+
+onRestart() →onStart →onResume
+
+5. **Activity A is opened, then you open a dialog in that Activity, which life cycle method of Activity A will be called.Ans.** Onpause()
+
+6. **When a new activity comes on top of your activity completely, then what is the life cycle function that gets executed in the old activity?Ans.** onPause() →onStop()
+
+7. **What is the mandatory activity life cycle function that will get called in case of configuration changes?Ans.**onPause() →onStop()→onDestroy() →onCreate()→onStart()→onResume()
+
+8. **When will onCreate() and onDestroy() method will be called, and how many times.Ans.** In general onCreate() and onDestroy() will be called only one times, but this two method gets executed twice if user rotates your device. For example, suppose you have an Activity called MainActivity, when you rotate, this life-cycle methods will be called,onPause() → onStop() →onDestroy() →onCreate() →onStart() →onResume()
+
+9. **How to restart an activity programmatically?Ans.** *Intent intent = getIntent();finish();startActivity(intent);*
+
+10. **Is it mandatory to implement onCreate() and onStart() of activity life cycle? Will it run if those methods are removed?Ans.** Not mandatory. Yes it will run even if those methods are removed.
+
+11. **Is it possible to have an Activity without UI?**
+
+**Ans.** Yes it is possible**. Android** provides a theme for this requirement.
+
+Learn about Activity Lifecycle
+
+[https://medium.com/@nithyanataraj/android-activity-life-cycle-32fcd0c2a973](https://medium.com/@nithyanataraj/android-activity-life-cycle-32fcd0c2a973)
