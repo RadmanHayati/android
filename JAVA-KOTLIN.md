@@ -368,4 +368,4 @@ a software design pattern is a general, reusable solution to a commonly occurrin
     - Iterator [Wikipedia](https://en.wikipedia.org/wiki/Iterator_pattern?oldformat=true)
     - Strategy [Wikipedia](https://en.wikipedia.org/wiki/Strategy_pattern?oldformat=true)
 
-7-**Data class vs regular class its byte code And equivalent in Java?**
+🏛️-**Data class vs regular class its byte code And equivalent in Java?**
